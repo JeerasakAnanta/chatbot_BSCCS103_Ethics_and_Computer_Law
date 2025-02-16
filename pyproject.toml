@@ -1,0 +1,17 @@
+[tool.poetry]
+name = "chatbot-bsccs103-ethics-and-computer-law"
+version = "0.1.0"
+description = "Chatbot Project"
+authors = ["Game <jeerasakananta@gmail.com>"]
+readme = "README.md"
+
+[tool.poetry.dependencies]
+python = "^3.12"
+streamlit = "^1.42.0"
+openai = "^1.63.0"
+langchain = "^0.3.18"
+python-dotenv = "^1.0.1"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
