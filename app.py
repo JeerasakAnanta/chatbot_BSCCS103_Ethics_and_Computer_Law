@@ -1,7 +1,14 @@
-import streamlit as st
-from openai import OpenAI
+################################################
+# Delopment  By  Jeerasak Ananta SS4 CS  RMUTL 
+################################################
 
+# streamlit  
+import streamlit as st
+# openai API 
+from openai import OpenAI
+# os 
 import os
+# use environment variable 
 from dotenv import load_dotenv
 
 # Load environment variables from .env file
@@ -45,7 +52,8 @@ def get_openai_response(prompt):
 
 # Streamlit app
 st.title("Chatbot สําหรับประเมินโรคซึมเศร้า")
-st.caption("Developed for BSCCS103 Ethics and Computer Law")
+st.caption("พัฒนาขึ้นสำหรับรายวิชา  BSCCS103 Ethics and Computer Law")
+
 # Initialize session state for chat history
 if "messages" not in st.session_state:
     st.session_state.messages = []
