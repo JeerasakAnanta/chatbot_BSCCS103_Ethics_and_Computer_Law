@@ -2,7 +2,7 @@
 - BSCCS103 Ethics and Computer Law จริยธรรมและกฎหมายคอมพิวเตอร์
 
 ## สามารถใช้งานได้จาก 
-Deployment on  [streamlit](!https://jeerasakananta-chatbot-bsccs103-ethics-and-computer--app-vdrxa6.streamlit.app/)
+Deployment on [streamlit](https://jeerasakananta-chatbot-bsccs103-ethics-and-computer--app-vdrxa6.streamlit.app/)
 
 ## วิธีการใช้งานพัฒนา  
 - สร้าง environment ด้วย poetry 
