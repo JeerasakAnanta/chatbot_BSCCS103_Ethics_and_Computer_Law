@@ -55,8 +55,8 @@ def get_openai_response(prompt):
         return f"An error occurred: {str(e)}"
 
 # Streamlit app
-st.title("Chatbot สําหรับประเมินโรคซึมเศร้า")
-st.caption("พัฒนาขึ้นสำหรับรายวิชา  BSCCS103 Ethics and Computer Law")
+st.title("Chatbot ประเมินอาการซึมเศร้า")
+st.caption("พัฒนาขึ้นสำหรับรายวิชา BSCCS103 Ethics and Computer Law สำหรับนักศึกษา RMUTL")
 
 # Initialize session state for chat history
 if "messages" not in st.session_state:
@@ -82,3 +82,16 @@ if prompt := st.chat_input("พิมข้อความของคุณ"):
     st.session_state.messages.append({"role": "assistant", "content": response})
     with st.chat_message("assistant"):
         st.markdown(response)
+        
+# About Chatbot
+st.sidebar.markdown("## เกียวกับ Chatbot")
+st.sidebar.write("Chatbot นี้เป็นโปรเจคของนักศึกษาคณะวิทยาการคอมพิวเตอร์ มหาวิทยาลัยราชมงคลล้านนา โดยมีจุดประสงค์เพื่อประเมินและให้คำแนะนำแก่ผู้ใช้ที่มีอาการซึมเศร้า")
+st.sidebar.write("Chatbot นี้ใช้ API ของ OpenAI ในการประมวลผลและตอบคำถาม โดยใช้ภาษาไทยในการสนทนา")
+st.sidebar.write("หากคุณมีข้อสงสัยหรือข้อเสนอแนะใดๆ สามารถติดต่อได้ที่ [jeerasakananta@gmail.com](mailto:jeerasakananta@gmail.com)")
+
+# About Me  page
+if st.sidebar.button("About Me "):
+    st.markdown("## About Me")
+    st.write("My name is Jeerasak Ananta, and I'm a student in the Computer Science program at Rajamangala University of Technology Lanna. I'm passionate about AI, machine learning, and data science. I'm also interested in computer networks, cybersecurity, and software engineering.")
+    st.write("I'm currently working on a chatbot project for my Ethics and Computer Law class. The goal of the project is to create a chatbot that can provide information and support to users who are experiencing mental health issues.")
+    st.write("I'm excited to share my project with you and get your feedback. If you have any questions or comments, please don't hesitate to reach out to me.")
