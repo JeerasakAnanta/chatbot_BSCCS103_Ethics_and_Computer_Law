@@ -58,6 +58,7 @@ def get_openai_response(prompt):
 st.title("Chatbot ประเมินอาการซึมเศร้า")
 st.caption("พัฒนาขึ้นสำหรับรายวิชา BSCCS103 Ethics and Computer Law สำหรับนักศึกษา RMUTL")
 
+
 # Initialize session state for chat history
 if "messages" not in st.session_state:
     st.session_state.messages = []
@@ -82,11 +83,11 @@ if prompt := st.chat_input("พิมข้อความของคุณ"):
     st.session_state.messages.append({"role": "assistant", "content": response})
     with st.chat_message("assistant"):
         st.markdown(response)
-        
+
 # About Chatbot
 st.sidebar.markdown("## เกียวกับ Chatbot")
 st.sidebar.write("Chatbot นี้เป็นโปรเจคของนักศึกษาคณะวิทยาการคอมพิวเตอร์ มหาวิทยาลัยราชมงคลล้านนา โดยมีจุดประสงค์เพื่อประเมินและให้คำแนะนำแก่ผู้ใช้ที่มีอาการซึมเศร้า")
-st.sidebar.write("Chatbot นี้ใช้ API ของ OpenAI ในการประมวลผลและตอบคำถาม โดยใช้ภาษาไทยในการสนทนา")
+st.sidebar.write("Chatbot การประเมินอาการซึมเศร้านี้ใช้งาน API ของ OpenAI  และการใช้งาน set Role ให้เป็นจิตแพทย์ ในการประมวลผลและตอบคำถาม โดยใช้ภาษาไทยในการสนทนา")
 st.sidebar.write("หากคุณมีข้อสงสัยหรือข้อเสนอแนะใดๆ สามารถติดต่อได้ที่ [jeerasakananta@gmail.com](mailto:jeerasakananta@gmail.com)")
 
 # About Me  page
